@@ -14,6 +14,7 @@ import group.skids.requiem.utils.value.impl.NumberValue;
 import net.b0at.api.event.Subscribe;
 import net.minecraft.block.BlockChest;
 import net.minecraft.client.gui.Gui;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.enchantment.Enchantment;
@@ -447,7 +448,7 @@ public class ESP extends Module {
         return new Vec3d(x, y, z);
     }
 
-    public void addEntity(EntityPlayer e, ModelPlayer model) {
+    public void addEntity(EntityPlayer e, ModelBiped model) {
         entities.put(e, new float[][]{{model.bipedHead.rotateAngleX, model.bipedHead.rotateAngleY, model.bipedHead.rotateAngleZ}, {model.bipedRightArm.rotateAngleX, model.bipedRightArm.rotateAngleY, model.bipedRightArm.rotateAngleZ}, {model.bipedLeftArm.rotateAngleX, model.bipedLeftArm.rotateAngleY, model.bipedLeftArm.rotateAngleZ}, {model.bipedRightLeg.rotateAngleX, model.bipedRightLeg.rotateAngleY, model.bipedRightLeg.rotateAngleZ}, {model.bipedLeftLeg.rotateAngleX, model.bipedLeftLeg.rotateAngleY, model.bipedLeftLeg.rotateAngleZ}});
     }
 

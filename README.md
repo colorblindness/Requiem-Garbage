@@ -26,4 +26,4 @@ gradlew setupDevWorkspace idea genIntellijRuns build
 
 # Run
 
-Add ```-Dfml.coreMods.load=group.skids.requiem.mixin.launch.RequiemLoader``` to VM options.
+Add ```-Dfml.coreMods.load=group.skids.requiem.mixin.loader.RequiemLoader``` to VM options.

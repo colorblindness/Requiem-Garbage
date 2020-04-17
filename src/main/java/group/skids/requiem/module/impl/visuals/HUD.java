@@ -2,6 +2,7 @@ package group.skids.requiem.module.impl.visuals;
 
 import group.skids.requiem.client.Requiem;
 import group.skids.requiem.events.Render2DEvent;
+import group.skids.requiem.events.RenderPotionEffectsEvent;
 import group.skids.requiem.module.Module;
 import net.b0at.api.event.Subscribe;
 
@@ -27,5 +28,10 @@ public class HUD extends Module {
             getMc().fontRenderer.drawStringWithShadow(renderString, event.getScaledResolution().getScaledWidth() - 2 - getMc().fontRenderer.getStringWidth(renderString), offsetY, module.getColor());
             offsetY += 2 + getMc().fontRenderer.FONT_HEIGHT;
         }
+    }
+
+    @Subscribe
+    public void onRenderPotionEffects(RenderPotionEffectsEvent event) {
+        event.setCancelled(true);
     }
 }

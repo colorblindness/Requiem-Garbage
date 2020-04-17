@@ -12,6 +12,7 @@
     "MixinEntityPlayerSP",
     "MixinEntityRenderer",
     "MixinGuiChest",
+    "MixinGuiIngame",
     "MixinGuiScreen",
     "MixinMinecraft",
     "MixinModelPlayer",
