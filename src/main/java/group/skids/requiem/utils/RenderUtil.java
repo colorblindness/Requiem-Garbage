@@ -314,8 +314,7 @@ public class RenderUtil {
         int width = Minecraft.getMinecraft().fontRenderer.getStringWidth(name) / 2;
         GL11.glPushMatrix();
         GL11.glPopMatrix();
-        GL11.glColor4f(1, 1, 1, 1);
-        Gui.drawRect(-width - 1, -(Minecraft.getMinecraft().fontRenderer.FONT_HEIGHT + 8), (-width - 1)+ 2 + width * 2, -(Minecraft.getMinecraft().fontRenderer.FONT_HEIGHT - 1), 0);
+        GL11.glColor4f(1f, 1f, 1f, 1f);
         GL11.glScalef(0.5f,0.5f,0.5f);
         Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(name, -(width), -(Minecraft.getMinecraft().fontRenderer.FONT_HEIGHT + 7), color);
         GL11.glScalef(1f,1f,1f);

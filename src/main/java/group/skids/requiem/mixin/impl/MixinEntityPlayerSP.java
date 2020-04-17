@@ -5,6 +5,7 @@ import group.skids.requiem.client.Requiem;
 import group.skids.requiem.events.MotionEvent;
 import group.skids.requiem.events.PushEvent;
 import group.skids.requiem.events.UpdateEvent;
+import group.skids.requiem.events.UpdateInputEvent;
 import group.skids.requiem.mixin.accessors.IEntityPlayerSP;
 import net.b0at.api.event.types.EventType;
 import net.minecraft.client.Minecraft;
@@ -25,6 +26,11 @@ public class MixinEntityPlayerSP extends MixinEntityPlayer implements IEntityPla
     protected Minecraft mc;
 
     private UpdateEvent eventUpdate;
+
+    @Inject(method = "onLivingUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/tutorial/Tutorial;handleMovement(Lnet/minecraft/util/MovementInput;)V"))
+    private void onLivingUpdate(CallbackInfo ci) {
+        Requiem.INSTANCE.getBus().fireEvent(new UpdateInputEvent());
+    }
 
     @Override
     public void move(MoverType p_move_1_, double p_move_2_, double p_move_4_, double p_move_6_) {

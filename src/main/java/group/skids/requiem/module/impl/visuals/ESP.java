@@ -247,7 +247,7 @@ public class ESP extends Module {
             GL11.glPushMatrix();
             GL11.glEnable(GL11.GL_LINE_SMOOTH);
             GL11.glLineWidth(skeletonwidth.getValue());
-            GlStateManager.color(clr.getRed() / 255, clr.getGreen() / 255, clr.getBlue() / 255, 1);
+            GlStateManager.color(clr.getRed() / 255.f, clr.getGreen() / 255.f, clr.getBlue() / 255.f, 1);
             Vec3d vec = getVec3(event, e);
             double x = vec.x - ((IRenderManager) getMc().getRenderManager()).getRenderPosX();
             double y = vec.y - ((IRenderManager) getMc().getRenderManager()).getRenderPosY();
@@ -258,7 +258,7 @@ public class ESP extends Module {
             GL11.glTranslated(0.0D, 0.0D, e.isSneaking() ? -0.235D : 0.0D);
             float yOff = e.isSneaking() ? 0.6F : 0.75F;
             GL11.glPushMatrix();
-            GlStateManager.color(clr.getRed() / 255, clr.getGreen() / 255, clr.getBlue() / 255, 1);
+            GlStateManager.color(clr.getRed() / 255.f, clr.getGreen() / 255.f, clr.getBlue() / 255.f, 1);
             GL11.glTranslated(-0.125D, yOff, 0.0D);
             if (entPos[3][0] != 0.0F) {
                 GL11.glRotatef(entPos[3][0] * 57.295776F, 1.0F, 0.0F, 0.0F);
@@ -278,7 +278,7 @@ public class ESP extends Module {
             GL11.glEnd();
             GL11.glPopMatrix();
             GL11.glPushMatrix();
-            GlStateManager.color(clr.getRed() / 255, clr.getGreen() / 255, clr.getBlue() / 255, 1);
+            GlStateManager.color(clr.getRed() / 255.f, clr.getGreen() / 255.f, clr.getBlue() / 255.f, 1);
             GL11.glTranslated(0.125D, yOff, 0.0D);
             if (entPos[4][0] != 0.0F) {
                 GL11.glRotatef(entPos[4][0] * 57.295776F, 1.0F, 0.0F, 0.0F);
@@ -299,10 +299,10 @@ public class ESP extends Module {
             GL11.glPopMatrix();
             GL11.glTranslated(0.0D, 0.0D, e.isSneaking() ? 0.25D : 0.0D);
             GL11.glPushMatrix();
-            GlStateManager.color(clr.getRed() / 255, clr.getGreen() / 255, clr.getBlue() / 255, 1);
+            GlStateManager.color(clr.getRed() / 255.f, clr.getGreen() / 255.f, clr.getBlue() / 255.f, 1);
             GL11.glTranslated(0.0D, e.isSneaking() ? -0.05D : 0.0D, e.isSneaking() ? -0.01725D : 0.0D);
             GL11.glPushMatrix();
-            GlStateManager.color(clr.getRed() / 255, clr.getGreen() / 255, clr.getBlue() / 255, 1);
+            GlStateManager.color(clr.getRed() / 255.f, clr.getGreen() / 255.f, clr.getBlue() / 255.f, 1);
             GL11.glTranslated(-0.375D, yOff + 0.55D, 0.0D);
             if (entPos[1][0] != 0.0F) {
                 GL11.glRotatef(entPos[1][0] * 57.295776F, 1.0F, 0.0F, 0.0F);
@@ -342,7 +342,7 @@ public class ESP extends Module {
             GL11.glPopMatrix();
             GL11.glRotatef(xOff - e.rotationYawHead, 0.0F, 1.0F, 0.0F);
             GL11.glPushMatrix();
-            GlStateManager.color(clr.getRed() / 255, clr.getGreen() / 255, clr.getBlue() / 255, 1);
+            GlStateManager.color(clr.getRed() / 255.f, clr.getGreen() / 255.f, clr.getBlue() / 255.f, 1);
             GL11.glTranslated(0.0D, yOff + 0.55D, 0.0D);
             if (entPos[0][0] != 0.0F) {
                 GL11.glRotatef(entPos[0][0] * 57.295776F, 1.0F, 0.0F, 0.0F);
@@ -364,7 +364,7 @@ public class ESP extends Module {
             GL11.glEnd();
             GL11.glPopMatrix();
             GL11.glPushMatrix();
-            GlStateManager.color(clr.getRed() / 255, clr.getGreen() / 255, clr.getBlue() / 255, 1);
+            GlStateManager.color(clr.getRed() / 255.f, clr.getGreen() / 255.f, clr.getBlue() / 255.f, 1);
             GL11.glTranslated(0.0D, yOff, 0.0D);
             GL11.glBegin(3);
             GL11.glVertex3d(0.0D, 0.0D, 0.0D);

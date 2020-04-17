@@ -44,6 +44,8 @@ public class ModuleManager {
         registerMod(Jesus.class);
         registerMod(Freecam.class);
         registerMod(NoPush.class);
+        registerMod(AutoCrystal.class);
+        registerMod(NoSlowDown.class);
         Requiem.INSTANCE.getBus().registerListener(this);
         loadModules();
     }
