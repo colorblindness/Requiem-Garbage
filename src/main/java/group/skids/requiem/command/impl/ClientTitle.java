@@ -14,7 +14,7 @@ public class ClientTitle extends Command {
     public void onRun(String[] args) {
         if (args.length > 1) {
             final StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 2; i < args.length; i++) {
+            for (int i = 1; i < args.length; i++) {
                 stringBuilder.append(args[i]);
                 if (i != args.length - 1) stringBuilder.append(" ");
             }

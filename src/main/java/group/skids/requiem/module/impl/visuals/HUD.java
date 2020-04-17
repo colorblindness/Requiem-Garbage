@@ -17,7 +17,7 @@ public class HUD extends Module {
     public void onRender2D(Render2DEvent event) {
         if (getMc().world == null || getMc().player == null) return;
         if (getMc().gameSettings.showDebugInfo) return;
-        getMc().fontRenderer.drawStringWithShadow(Requiem.INSTANCE.getLabel().getValueAsString() + " " + Requiem.INSTANCE.getVersion(), 2, 2, -1);
+        getMc().fontRenderer.drawStringWithShadow(Requiem.INSTANCE.getLabel().getValueAsString() + " " + Requiem.INSTANCE.getVersion(), 2, 2, 0xff6000ff);
         int offsetY = 2;
         final ArrayList<Module> sorted = new ArrayList<>(Requiem.INSTANCE.getModuleManager().getModuleMap().values());
         sorted.sort(Comparator.comparingDouble(module->-getMc().fontRenderer.getStringWidth((module.getRenderLabel() != null ? module.getRenderLabel() : module.getLabel()) + (module.getSuffix() != null ? " " + module.getSuffix() : ""))));
