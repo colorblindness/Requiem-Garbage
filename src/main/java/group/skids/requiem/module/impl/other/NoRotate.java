@@ -11,7 +11,7 @@ import java.awt.Color;
 
 public class NoRotate extends Module {
     public NoRotate() {
-        super("NoRotate", Category.OTHER, new Color(0x9D9798).getRGB());
+        super("NoRotate", Category.OTHER, 0x9D9798);
         setRenderLabel("No Rotate");
         setDescription("Cancel ncp rotation flags.");
     }

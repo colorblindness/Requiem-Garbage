@@ -95,7 +95,7 @@ public class Freecam extends Module {
     @Subscribe
     public void onBB(BoundingBoxEvent event) {
         if (getMc().world == null || getMc().player == null) return;
-        event.setAabb(null);
+        if (event.getEntity() == getMc().player) event.setAabb(null);
     }
 
     @Subscribe

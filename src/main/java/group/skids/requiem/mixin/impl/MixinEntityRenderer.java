@@ -1,6 +1,7 @@
 package group.skids.requiem.mixin.impl;
 
 import group.skids.requiem.client.Requiem;
+import group.skids.requiem.events.HurtCamEvent;
 import group.skids.requiem.events.Render2DEvent;
 import group.skids.requiem.events.Render3DEvent;
 import group.skids.requiem.utils.GLUProjection;
@@ -42,5 +43,12 @@ public abstract class MixinEntityRenderer  {
         projection.updateMatrices(viewPort, modelView, projectionPort, scaledResolution.getScaledWidth() / (double) Minecraft.getMinecraft().displayWidth,
                 scaledResolution.getScaledHeight() / (double) Minecraft.getMinecraft().displayHeight);
         Requiem.INSTANCE.getBus().fireEvent(new Render3DEvent(partialTicks));
+    }
+
+    @Inject(method = "hurtCameraEffect", at = @At("HEAD"), cancellable = true)
+    private void hurtCameraEffect(float partialTicks, CallbackInfo ci) {
+        HurtCamEvent event = new HurtCamEvent();
+        Requiem.INSTANCE.getBus().fireEvent(event);
+        if (event.isCancelled()) ci.cancel();
     }
 }

@@ -21,7 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(EntityPlayerSP.class)
-public class MixinEntityPlayerSP extends MixinEntityPlayer implements IEntityPlayerSP {
+public abstract class MixinEntityPlayerSP extends MixinEntityPlayer implements IEntityPlayerSP {
     @Shadow
     protected Minecraft mc;
 

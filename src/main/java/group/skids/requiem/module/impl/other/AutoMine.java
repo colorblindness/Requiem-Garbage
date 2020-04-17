@@ -18,7 +18,7 @@ public class AutoMine extends Module {
     private BlockPos pos;
 
     public AutoMine() {
-        super("AutoMine", Category.OTHER, new Color(0x9D9798).getRGB());
+        super("AutoMine", Category.OTHER, 0x9D9798);
         setRenderLabel("Auto Mine");
     }
 

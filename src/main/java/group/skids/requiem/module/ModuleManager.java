@@ -46,6 +46,12 @@ public class ModuleManager {
         registerMod(NoPush.class);
         registerMod(AutoCrystal.class);
         registerMod(NoSlowDown.class);
+        registerMod(Fullbright.class);
+        registerMod(LowHand.class);
+        registerMod(AutoTotem.class);
+        registerMod(NoBossBar.class);
+        registerMod(NoHurtCam.class);
+        registerMod(PortalChat.class);
         Requiem.INSTANCE.getBus().registerListener(this);
         loadModules();
     }

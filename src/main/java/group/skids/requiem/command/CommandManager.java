@@ -78,6 +78,12 @@ public class CommandManager {
                     Printer.print(m.getLabel() + " is a " + (m.isHidden() ? "hidden " : "shown ") + "module.");
                     Printer.print(m.getLabel() + " is bound to " + Keyboard.getKeyName(m.getKeybind()) + ".");
                     return;
+                } else if (command[1].equalsIgnoreCase("toggle")) {
+                    //Put this little toggle command here because I like having one here like this
+                    //It's not needed at all, just something I put because i thought it might be nice
+                    m.toggle();
+                    Printer.print("Toggled " + m.getLabel());
+                    return;
                 }
                 if (command.length > 2) {
                     if (command[1].equalsIgnoreCase("hidden")) {
@@ -107,7 +113,7 @@ public class CommandManager {
         }
         Requiem.INSTANCE.getCommandManager().getCommandMap().values().forEach(c -> {
             for (String handle : c.getHandles()) {
-                if (handle.toLowerCase().equals(command[0])) c.onRun(command);
+                if (handle.toLowerCase().equals(command[0].toLowerCase())) c.onRun(command);
             }
         });
     }

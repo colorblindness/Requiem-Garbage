@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(EntityPlayer.class)
-public class MixinEntityPlayer extends MixinEntity {
+public abstract class MixinEntityPlayer extends MixinEntity {
 
     @Inject(method = "isEntityInsideOpaqueBlock",at = @At("HEAD"),cancellable = true)
     private void onIsEntityInsideOpaqueBlock(CallbackInfoReturnable<Boolean> cir) {
