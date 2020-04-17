@@ -1,0 +1,16 @@
+[
+{
+  "modid": "requiem",
+  "name": "Requiem",
+  "description": "Gayngster Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["oHare","cats","3arth","zim"],
+  "credits": "The gayngsters.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

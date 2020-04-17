@@ -1,0 +1,28 @@
+{
+  "package": "group.skids.requiem.mixin.impl",
+  "refmap": "mixin.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "verbose": false,
+  "mixins": [
+    "MixinBlock",
+    "MixinCPacketPlayer",
+    "MixinEntity",
+    "MixinEntityPlayer",
+    "MixinEntityPlayerSP",
+    "MixinEntityRenderer",
+    "MixinGuiChest",
+    "MixinGuiScreen",
+    "MixinMinecraft",
+    "MixinModelPlayer",
+    "MixinNetHandlerPlayClient",
+    "MixinNetworkManager",
+    "MixinPlayerControllerMP",
+    "MixinRender",
+    "MixinRenderManager",
+    "MixinSPacketEntityVelocity",
+    "MixinSPacketExplosion",
+    "MixinSPacketPosLook",
+    "MixinWorldClient"
+  ]
+}
