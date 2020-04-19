@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 
 import javax.xml.stream.Location;
 import java.math.BigDecimal;
@@ -31,6 +32,15 @@ public class MathUtils {
 
     public static double distance2D(double startX, double startZ, double endX, double endZ) {
         return Math.hypot(startX - endX, startZ - endZ);
+    }
+    public static float[] calcAngle(Vec3d from, Vec3d to) {
+        final double difX = to.x - from.x;
+        final double difY = (to.y - from.y) * -1.0F;
+        final double difZ = to.z - from.z;
+
+        final double dist = MathHelper.sqrt(difX * difX + difZ * difZ);
+
+        return new float[]{(float) MathHelper.wrapDegrees(Math.toDegrees(Math.atan2(difZ, difX)) - 90.0f), (float) MathHelper.wrapDegrees(Math.toDegrees(Math.atan2(difY, dist)))};
     }
 
     public static double distance3D(Entity Player, Entity target) {
