@@ -10,7 +10,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class ClickGui extends GuiScreen {
@@ -58,6 +57,7 @@ public class ClickGui extends GuiScreen {
                     for (ModuleButton moduleButton : button.getModuleButtons()) {
                         if (moduleButton.isHovered(mouseX, mouseY)) {
                             moduleButton.onClick();
+                            return;
                         }
                     }
                 }
