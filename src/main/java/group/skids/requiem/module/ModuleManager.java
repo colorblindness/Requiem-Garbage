@@ -52,6 +52,7 @@ public class ModuleManager {
         registerMod(NoBossBar.class);
         registerMod(NoHurtCam.class);
         registerMod(PortalChat.class);
+        registerMod(ClickGUI.class);
         Requiem.INSTANCE.getBus().registerListener(this);
         loadModules();
     }

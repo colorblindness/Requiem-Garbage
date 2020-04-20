@@ -3,12 +3,14 @@ package group.skids.requiem.client;
 import com.mojang.realmsclient.gui.ChatFormatting;
 import group.skids.requiem.command.CommandManager;
 import group.skids.requiem.friend.FriendManager;
+import group.skids.requiem.gui.ClickGui;
 import group.skids.requiem.macro.MacroManager;
 import group.skids.requiem.module.ModuleManager;
 import group.skids.requiem.utils.thealtening.AltService;
 import group.skids.requiem.utils.value.impl.StringValue;
 import net.b0at.api.event.Event;
 import net.b0at.api.event.EventManager;
+import net.minecraft.client.gui.Gui;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -24,6 +26,9 @@ public enum Requiem {
     private final FriendManager friendManager = new FriendManager();
     private final MacroManager macroManager = new MacroManager();
     private final AltService altService = new AltService();
+
+    private final ClickGui clickGui = new ClickGui();
+
     public void setupClient() {
         if (!path.toFile().exists()) path.toFile().mkdir();
         moduleManager.setDir(new File(path.toString(), "modules"));
@@ -32,6 +37,7 @@ public enum Requiem {
         friendManager.getFriendSaving().loadFile();
         commandManager.initialize();
         macroManager.init();
+        clickGui.init();
         System.out.println("Setup Client");
     }
 
@@ -86,5 +92,9 @@ public enum Requiem {
 
     public MacroManager getMacroManager() {
         return macroManager;
+    }
+
+    public ClickGui getClickGui() {
+        return clickGui;
     }
 }
